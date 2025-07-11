@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BETRMINT - Onchain Creator Game</title>
+    <style>
+        body {
+            width: 320px;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0;
+        }
+        
+        .popup-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .popup-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+        
+        .popup-description {
+            font-size: 13px;
+            opacity: 0.95;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .popup-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .popup-button {
+            padding: 12px 15px;
+            border: none;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 500;
+        }
+        
+        .popup-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-1px);
+        }
+        
+        .popup-button.primary {
+            background: rgba(0, 255, 255, 0.8);
+            color: #000;
+            font-weight: 600;
+        }
+        
+        .popup-button.primary:hover {
+            background: rgba(0, 255, 255, 1);
+        }
+        
+        .logo {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 15px;
+            display: block;
+        }
+        
+        .popup-info {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 8px;
+            background: rgba(0, 255, 255, 0.05);
+        }
+        
+        .schedule-info h3 {
+            margin: 0 0 10px 0;
+            color: #00ffff;
+            font-size: 16px;
+            text-shadow: 0 0 10px #00ffff;
+        }
+        
+        .schedule-info p {
+            margin: 5px 0;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .schedule-info .note {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+            margin-top: 10px;
+        }
+        
+        .prize-highlight {
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-header">
+        <img src="icons/icon48.png" alt="BETRMINT Logo" class="logo">
+        <div class="popup-title">BETRMINT</div>
+        <div class="popup-description">
+            Turn supporting onchain creators into a game of serendipitous speculation. Collect content, get FREE TICKETS, and spin the neon flywheel to win up to 100X in Based tokens!
+        </div>
+    </div>
+    
+    <div class="popup-info">
+        <div class="schedule-info">
+            <h3>Round Schedule</h3>
+            <p><strong>Days:</strong> Monday, Wednesday, Friday</p>
+            <p><strong>Time:</strong> 3:00 PM EST</p>
+            <p><strong>Prize Pool:</strong> <span class="prize-highlight">$1500</span> per round</p>
+            <p class="note">Rounds go fast! Turn on notifications to never miss a drop</p>
+        </div>
+    </div>
+    
+    <div class="popup-actions">
+        <button class="popup-button primary" id="showCountdown">Show Countdown</button>
+        <button class="popup-button" id="hideCountdown">Hide Countdown</button>
+        <button class="popup-button" id="refreshTimer">Refresh Timer</button>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html> 

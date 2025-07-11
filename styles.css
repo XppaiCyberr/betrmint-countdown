@@ -1,0 +1,373 @@
+/* Betr Countdown Menu Styles - Neon Design */
+.betr-countdown-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  background: linear-gradient(135deg, #1a0d2e 0%, #16213e 50%, #0f1419 100%);
+  border-radius: 20px;
+  box-shadow: 
+    0 0 20px rgba(255, 0, 150, 0.3),
+    0 0 40px rgba(0, 255, 255, 0.2),
+    inset 0 0 20px rgba(255, 0, 150, 0.1);
+  padding: 20px;
+  min-width: 280px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 3px solid #ff0096;
+  user-select: none;
+  display: block;
+  animation: neonBorder 2s linear infinite;
+}
+
+.betr-countdown-container.minimized {
+  min-width: 80px;
+  max-width: 80px;
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@keyframes neonBorder {
+  0%, 100% { 
+    border-color: #ff0096;
+    box-shadow: 
+      0 0 20px rgba(255, 0, 150, 0.3),
+      0 0 40px rgba(0, 255, 255, 0.2),
+      inset 0 0 20px rgba(255, 0, 150, 0.1);
+  }
+  50% { 
+    border-color: #00ffff;
+    box-shadow: 
+      0 0 20px rgba(0, 255, 255, 0.3),
+      0 0 40px rgba(255, 0, 150, 0.2),
+      inset 0 0 20px rgba(0, 255, 255, 0.1);
+  }
+}
+
+
+
+.betr-countdown-container:hover {
+  transform: translateY(-2px);
+}
+
+
+
+.betr-countdown-display {
+  text-align: center;
+  color: white;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.betr-minimized-display {
+  text-align: center;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.betr-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 
+    0 0 20px rgba(255, 0, 150, 0.6),
+    0 0 40px rgba(0, 255, 255, 0.4),
+    inset 0 0 20px rgba(255, 0, 150, 0.2);
+  border: 3px solid #ff0096;
+  animation: logoPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes logoPulse {
+  0% { 
+    box-shadow: 
+      0 0 20px rgba(255, 0, 150, 0.6),
+      0 0 40px rgba(0, 255, 255, 0.4),
+      inset 0 0 20px rgba(255, 0, 150, 0.2);
+  }
+  100% { 
+    box-shadow: 
+      0 0 30px rgba(255, 0, 150, 0.8),
+      0 0 60px rgba(0, 255, 255, 0.6),
+      inset 0 0 30px rgba(255, 0, 150, 0.3);
+  }
+}
+
+.betr-countdown-title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  color: #00ffff;
+  text-shadow: 
+    0 0 10px #00ffff,
+    0 0 20px #00ffff,
+    0 0 30px #00ffff,
+    0 0 40px #00ffff;
+  animation: titleGlow 1.5s ease-in-out infinite alternate;
+}
+
+.betr-schedule-info {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.betr-play-button {
+  margin-top: 15px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ff0096, #ff0066);
+  border: 2px solid #ff0096;
+  border-radius: 25px;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 0 20px rgba(255, 0, 150, 0.4),
+    inset 0 0 20px rgba(255, 0, 150, 0.1);
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 0, 150, 0.6);
+  animation: buttonPulse 2s ease-in-out infinite alternate;
+}
+
+.betr-play-button:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: linear-gradient(135deg, #ff0066, #ff0096);
+  box-shadow: 
+    0 0 30px rgba(255, 0, 150, 0.6),
+    0 5px 15px rgba(255, 0, 150, 0.3),
+    inset 0 0 30px rgba(255, 0, 150, 0.2);
+  text-shadow: 
+    0 0 15px rgba(255, 255, 255, 1),
+    0 0 30px rgba(255, 0, 150, 0.8);
+}
+
+.betr-play-button:active {
+  transform: translateY(0) scale(1.02);
+  box-shadow: 
+    0 0 20px rgba(255, 0, 150, 0.5),
+    inset 0 0 20px rgba(255, 0, 150, 0.3);
+}
+
+@keyframes buttonPulse {
+  0% {
+    box-shadow: 
+      0 0 20px rgba(255, 0, 150, 0.4),
+      inset 0 0 20px rgba(255, 0, 150, 0.1);
+  }
+  100% {
+    box-shadow: 
+      0 0 25px rgba(255, 0, 150, 0.6),
+      inset 0 0 25px rgba(255, 0, 150, 0.2);
+  }
+}
+
+.betr-spin-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: spin 2s linear infinite, spinGlow 2s ease-in-out infinite alternate;
+  box-shadow: 
+    0 0 10px rgba(255, 0, 150, 0.4),
+    0 0 20px rgba(0, 255, 255, 0.2);
+  border: 2px solid #ff0096;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.betr-spin-logo:hover {
+  transform: scale(1.1);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinGlow {
+  0% { 
+    box-shadow: 
+      0 0 10px rgba(255, 0, 150, 0.4),
+      0 0 20px rgba(0, 255, 255, 0.2);
+  }
+  100% { 
+    box-shadow: 
+      0 0 15px rgba(255, 0, 150, 0.6),
+      0 0 30px rgba(0, 255, 255, 0.4);
+  }
+}
+
+@keyframes titleGlow {
+  0% { 
+    text-shadow: 
+      0 0 10px #00ffff,
+      0 0 20px #00ffff,
+      0 0 30px #00ffff,
+      0 0 40px #00ffff;
+  }
+  100% { 
+    text-shadow: 
+      0 0 15px #00ffff,
+      0 0 25px #00ffff,
+      0 0 35px #00ffff,
+      0 0 45px #00ffff;
+  }
+}
+
+.betr-countdown-time {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 12px 20px;
+  border-radius: 15px;
+  border: 2px solid #ff0096;
+  color: #ff0096;
+  text-shadow: 
+    0 0 10px #ff0096,
+    0 0 20px #ff0096,
+    0 0 30px #ff0096;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 0 20px rgba(255, 0, 150, 0.3),
+    inset 0 0 20px rgba(255, 0, 150, 0.1);
+  animation: timeGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes timeGlow {
+  0% { 
+    text-shadow: 
+      0 0 10px #ff0096,
+      0 0 20px #ff0096,
+      0 0 30px #ff0096;
+    box-shadow: 
+      0 0 20px rgba(255, 0, 150, 0.3),
+      inset 0 0 20px rgba(255, 0, 150, 0.1);
+  }
+  100% { 
+    text-shadow: 
+      0 0 15px #ff0096,
+      0 0 25px #ff0096,
+      0 0 35px #ff0096;
+    box-shadow: 
+      0 0 30px rgba(255, 0, 150, 0.5),
+      inset 0 0 30px rgba(255, 0, 150, 0.2);
+  }
+}
+
+.betr-minimize-btn, .betr-close-btn {
+  position: absolute;
+  top: 8px;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #00ffff;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #00ffff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  text-shadow: 0 0 10px #00ffff;
+  box-shadow: 
+    0 0 10px rgba(0, 255, 255, 0.3),
+    inset 0 0 10px rgba(0, 255, 255, 0.1);
+  z-index: 10;
+}
+
+.betr-minimize-btn:hover, .betr-close-btn:hover {
+  background: rgba(0, 255, 255, 0.2);
+  transform: scale(1.1);
+  box-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.5),
+    inset 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.betr-minimize-btn {
+  left: 8px;
+}
+
+.betr-close-btn {
+  right: 8px;
+  border-color: #ff0096;
+  color: #ff0096;
+  text-shadow: 0 0 10px #ff0096;
+  box-shadow: 
+    0 0 10px rgba(255, 0, 150, 0.3),
+    inset 0 0 10px rgba(255, 0, 150, 0.1);
+  font-size: 16px;
+}
+
+.betr-close-btn:hover {
+  background: rgba(255, 0, 150, 0.2);
+  box-shadow: 
+    0 0 20px rgba(255, 0, 150, 0.5),
+    inset 0 0 20px rgba(255, 0, 150, 0.2);
+}
+
+/* Hide buttons when minimized */
+.betr-countdown-container.minimized .betr-minimize-btn,
+.betr-countdown-container.minimized .betr-close-btn {
+  display: none;
+}
+
+
+
+/* Animation for smooth transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .betr-countdown-container {
+    top: 10px;
+    right: 10px;
+    min-width: 180px;
+    padding: 12px;
+  }
+  
+  .betr-countdown-time {
+    font-size: 16px;
+  }
+  
+  .betr-countdown-title {
+    font-size: 11px;
+  }
+} 

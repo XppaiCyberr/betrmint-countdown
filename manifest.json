@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "BETRMINT Countdown - Onchain Creator Game",
+  "version": "1.0",
+  "description": "Turn supporting onchain creators into a game of serendipitous speculation. Collect content, get FREE TICKETS, and spin the neon flywheel to win up to 100X in Based tokens!",
+  "author": "XppaiCyber",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "BETRMINT Countdown - Onchain Creator Game"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["img/betr.webp", "img/spin.webp", "config.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+} 
