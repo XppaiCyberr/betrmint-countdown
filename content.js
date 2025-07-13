@@ -9,14 +9,15 @@ function createCountdownMenu() {
   loadConfig().then(config => {
     const nextGameTime = calculateNextGameTime(config.schedule);
     
-    // Create the menu container
+    // Create the menu container (start minimized by default)
     const menu = document.createElement('div');
     menu.id = 'betr-countdown-menu';
-    menu.className = 'betr-countdown-container';
+    menu.className = 'betr-countdown-container minimized';
 
     // Create the countdown display
     const countdownDisplay = document.createElement('div');
     countdownDisplay.className = 'betr-countdown-display';
+    countdownDisplay.style.display = 'none'; // Hidden by default
     
     // Format initial display time
     const timeLeft = nextGameTime - new Date().getTime();
@@ -30,10 +31,10 @@ function createCountdownMenu() {
       <button class="betr-play-button" id="betr-play-button">Launch BETRMINT</button>
     `;
 
-    // Create minimized view
+    // Create minimized view (visible by default)
     const minimizedDisplay = document.createElement('div');
     minimizedDisplay.className = 'betr-minimized-display';
-    minimizedDisplay.style.display = 'none';
+    minimizedDisplay.style.display = 'flex'; // Visible by default
     minimizedDisplay.innerHTML = `
       <img src="${chrome.runtime.getURL('img/spin.webp')}" alt="Spin" class="betr-spin-logo">
     `;
