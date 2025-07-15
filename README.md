@@ -2,7 +2,7 @@
 
 A Chrome extension that displays a countdown timer for the next BETRMINT game round, helping users never miss a chance to win up to 100X in Based tokens!
 
-**Latest Version: 1.1.0** - Now starts minimized by default for a cleaner browsing experience!
+**Latest Version: 1.2.0** - Now optimized for specific social media platforms!
 
 ---
 
@@ -18,7 +18,7 @@ A Chrome extension that displays a countdown timer for the next BETRMINT game ro
 
 - 🎮 **Game Countdown**: Shows time until next BETRMINT round with precision timing
 - 📅 **Smart Scheduling**: Automatically calculates next game based on Mon/Wed/Fri at 3:00 PM EST schedule
-- 🎯 **Auto-Injection**: Appears on every webpage you visit
+- 🎯 **Smart Targeting**: Appears on major social media platforms where BETRMINT content is shared
 - 🎨 **Beautiful Design**: Modern gradient UI with neon glow effects
 - 🔧 **Interactive Controls**: Minimize and close functionality
 - 📱 **Responsive**: Works on desktop and mobile browsers
@@ -28,18 +28,18 @@ A Chrome extension that displays a countdown timer for the next BETRMINT game ro
 - ✨ **Default Minimized**: Starts as a small, unobtrusive spinning icon (New in v1.1.0)
 - 🎪 **Compact Design**: Smaller minimized container (50px) for better screen space usage
 
-## What's New in v1.1.0
+## What's New in v1.2.0
 
-### 🎯 Improved User Experience
-- **Default minimized state**: Extension now starts as a small, unobtrusive circular icon
-- **Smaller minimized container**: Reduced from 80px to 50px for less screen space usage
-- **Perfect circular shape**: Fixed oval distortion issue in minimized mode
-- **Optimized spinning logo**: Properly sized to fit perfectly in the smaller container
+### 🎯 Optimized Performance & Targeting
+- **Targeted Platform Support**: Now only runs on major social media platforms (Facebook, Instagram, YouTube, X.com, Farcaster.xyz)
+- **Improved Performance**: Reduced resource usage by limiting to relevant websites
+- **Better User Experience**: Less intrusive browsing on non-social media sites
+- **Strategic Placement**: Appears where BETRMINT content and community are most active
 
 ### 🔧 Technical Improvements
-- Updated glow effects to match smaller dimensions
-- Improved responsive design for minimized state
-- Better visual proportions and spacing
+- Updated manifest permissions for specific domain targeting
+- Optimized content script injection for better performance
+- Reduced overall extension footprint
 
 ## What is BETRMINT?
 
@@ -74,7 +74,7 @@ BETRMINT turns supporting onchain creators into a game of serendipitous speculat
 ## Usage
 
 ### Automatic Countdown
-- The countdown timer automatically appears on any webpage you visit as a **small spinning icon** in the top-right corner
+- The countdown timer automatically appears on social media platforms (Facebook, Instagram, YouTube, X.com, Farcaster.xyz) as a **small spinning icon** in the top-right corner
 - **Click the spinning icon** to expand and see the full countdown timer
 - Displays time remaining until the next scheduled game round
 - Automatically adjusts for EST/EDT timezone changes
@@ -143,7 +143,14 @@ To modify the schedule, edit `config.json`:
 
 ## Changelog
 
-### v1.1.0 (Latest)
+### v1.2.0 (Latest)
+- 🎯 Targeted platform support for social media sites only
+- ⚡ Improved performance by limiting to relevant websites
+- 🔧 Updated manifest permissions for specific domain targeting
+- 📱 Strategic placement on Facebook, Instagram, YouTube, X.com, and Farcaster.xyz
+- 🚀 Reduced overall extension footprint
+
+### v1.1.0
 - ✨ Default minimized state for better user experience
 - 🎯 Smaller minimized container (50px) for less screen space usage
 - 🔧 Fixed oval distortion in minimized mode
